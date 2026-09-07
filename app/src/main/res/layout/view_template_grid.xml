@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Top bar: search field + the global actions (hidden while the search keyboard is up). -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_search"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_switch"
+                style="@style/PanelIconButton"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/switch_keyboard"
+                android:src="@drawable/ic_keyboard" />
+
+            <ImageView
+                android:id="@+id/btn_settings"
+                style="@style/PanelIconButton"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/open_settings"
+                android:src="@drawable/ic_settings" />
+
+            <ImageView
+                android:id="@+id/btn_sources"
+                style="@style/PanelIconButton"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/sidebar_sources"
+                android:src="@drawable/ic_sources" />
+
+            <ImageView
+                android:id="@+id/btn_github"
+                style="@style/PanelIconButton"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/sidebar_github"
+                android:src="@drawable/ic_code" />
+
+            <ImageView
+                android:id="@+id/btn_donate"
+                style="@style/PanelIconButton"
+                android:layout_marginEnd="0dp"
+                android:contentDescription="@string/sidebar_donate"
+                android:src="@drawable/ic_favorite" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="6dp"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/no_templates"
+        android:textColor="@color/text_secondary"
+        android:visibility="gone" />
+
+    <!-- Category chips -->
+    <HorizontalScrollView
+        android:id="@+id/chips_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/chips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+    </HorizontalScrollView>
+
+    <!-- Shown only while the search field is active -->
+    <com.umo.memetype.ui.MiniKeyboardView
+        android:id="@+id/search_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:visibility="gone" />
+</merge>

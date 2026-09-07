@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="panel_bg">#FF1E1E22</color>
+    <color name="panel_surface">#FF2B2B31</color>
+    <color name="panel_surface_high">#FF3A3A42</color>
+    <color name="key_bg">#FF44444E</color>
+    <color name="key_bg_pressed">#FF6A6A78</color>
+    <color name="key_special">#FF33333B</color>
+    <color name="key_text">#FFF2F2F5</color>
+    <color name="text_primary">#FFF2F2F5</color>
+    <color name="text_secondary">#FFA9A9B5</color>
+    <color name="accent">#FF4F8CFF</color>
+    <color name="field_border">#FF5A5A66</color>
+    <color name="field_border_focused">#FF4F8CFF</color>
+    <color name="ic_launcher_background">#FF1E1E22</color>
+    <!-- Editor canvas overlay -->
+    <color name="overlay_box">#80FFFFFF</color>
+    <color name="overlay_handle">#FFFFFFFF</color>
+</resources>

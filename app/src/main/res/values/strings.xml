@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Memetype</string>
+    <string name="ime_name">Memetype</string>
+
+    <!-- Settings / onboarding -->
+    <string name="setup_title">Set up Memetype</string>
+    <string name="setup_step1">1. Enable “Memetype” in the system keyboard list.</string>
+    <string name="setup_step2">2. Pick it from the keyboard switcher (⌨ icon in the nav bar) whenever you want to send a meme.</string>
+    <string name="btn_enable">Enable keyboard</string>
+    <string name="btn_select">Select keyboard</string>
+    <string name="status_enabled">Enabled ✓</string>
+    <string name="status_not_enabled">Not enabled yet</string>
+    <string name="status_selected">Currently selected ✓</string>
+    <string name="status_not_selected">Not selected</string>
+    <string name="settings_section_keyboard">Keyboard</string>
+    <string name="settings_section_output">Output</string>
+    <string name="settings_section_about">About</string>
+    <string name="pref_save_sent">Save sent memes</string>
+    <string name="pref_save_sent_sub">Every meme you send is also saved to %1$s</string>
+    <string name="pref_save_folder">Save folder</string>
+    <string name="save_folder_default">Pictures/Memetype (default)</string>
+    <string name="save_folder_lost">Folder access lost — choose it again</string>
+    <string name="save_folder_none">Not available — grant storage permission below or choose a folder</string>
+    <string name="btn_choose_folder">Choose folder…</string>
+    <string name="btn_choose_folder_sub">Memetype writes PNG files there</string>
+    <string name="btn_use_default_folder">Use the default folder</string>
+    <string name="btn_grant_storage">Grant storage permission</string>
+    <string name="grant_storage_sub">Android 9 needs it to save into Pictures</string>
+    <string name="pref_watermark">Add watermark</string>
+    <string name="pref_watermark_sub">Small “Memetype” text in the bottom-right corner</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="toast_no_picker">No file manager found to pick a folder</string>
+    <string name="settings_section_history">History</string>
+    <string name="pref_history">Keep caption history</string>
+    <string name="pref_history_sub">Remembers the last 30 memes per template so you can reuse them</string>
+    <string name="btn_clear_history">Clear history</string>
+    <string name="btn_clear_history_sub">Deletes all remembered captions</string>
+    <string name="history_cleared">History cleared</string>
+    <string name="settings_section_sources">Sources</string>
+    <string name="manage_sources">Manage sources</string>
+    <string name="manage_sources_sub">Template packs and your own images</string>
+
+    <!-- Sources screen / import -->
+    <string name="sources_title">Sources</string>
+    <string name="sources_installed">Installed</string>
+    <string name="import_pack">Import pack (.zip)</string>
+    <string name="import_pack_sub">A memekb-pack zip: pack.json plus images</string>
+    <string name="import_image">Import image</string>
+    <string name="import_image_sub">Turn a picture into a template with your own text boxes</string>
+    <string name="pack_installed">Installed “%1$s” (%2$d templates)</string>
+    <string name="pack_invalid">Couldn’t install the pack: %1$s</string>
+    <string name="remove_source">Remove “%1$s”</string>
+    <plurals name="templates_count">
+        <item quantity="one">%1$d template</item>
+        <item quantity="other">%1$d templates</item>
+    </plurals>
+    <string name="edit_boxes_hint">Tap to edit or remove</string>
+    <string name="import_title">New template</string>
+    <string name="edit_template_title">Edit template</string>
+    <string name="import_instructions">Drag the boxes where the captions go; drag a corner to resize.</string>
+    <string name="import_save">Save</string>
+    <string name="delete_template">Remove</string>
+    <string name="template_saved">Template saved</string>
+    <string name="template_deleted">Template removed</string>
+    <string name="import_failed">Couldn’t read that image</string>
+    <string name="chip_mine">Mine</string>
+
+    <!-- Keyboard panel -->
+    <string name="search_hint">Search templates</string>
+    <string name="switch_keyboard">Switch back to previous keyboard</string>
+    <string name="open_settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="send">Send ✓</string>
+    <string name="chip_all">Popular</string>
+    <string name="chip_recent">Recent</string>
+    <string name="chip_reaction">Reaction</string>
+    <string name="chip_animals">Animals</string>
+    <string name="send_hint_clipboard">This app doesn’t accept images — will copy to clipboard</string>
+    <string name="no_templates">No templates</string>
+    <string name="toast_copied">Copied — long-press the text field and paste</string>
+    <string name="toast_render_failed">Couldn’t build the meme</string>
+    <string name="toast_saved">Saved to %1$s</string>
+    <string name="toast_save_failed">Couldn’t save the meme</string>
+    <string name="toast_save_unavailable">Not saved: choose a folder or grant storage in Settings</string>
+
+    <!-- Editor toolbar -->
+    <string name="add_box">Add text box</string>
+    <string name="delete_box">Delete text box</string>
+    <string name="reset_layout">Reset layout</string>
+    <string name="history">History</string>
+    <string name="history_empty">No previous memes for this template yet</string>
+    <string name="save">Save</string>
+    <string name="box_hint_n">Text %1$d</string>
+
+    <!-- Rendering -->
+    <string name="watermark_text">Memetype</string>
+
+    <!-- Top-bar actions and links -->
+    <string name="sidebar_sources">Sources</string>
+    <string name="sidebar_github">Project on GitHub</string>
+    <string name="sidebar_donate">Donate</string>
+    <!-- TODO: fill in once the repository and the donation page exist. Blank = the buttons report "Link not set yet". -->
+    <string name="github_url"></string>
+    <string name="donate_url"></string>
+    <string name="link_not_set">Link not set yet</string>
+    <string name="toast_no_browser">No browser found to open the link</string>
+    <string name="donate_title">Support Memetype</string>
+    <string name="donate_body">Memetype is free and open source. If it makes your chats better, a small donation keeps it going.</string>
+    <string name="donate_open">Open donation page</string>
+    <string name="close">Close</string>
+</resources>

@@ -1,0 +1,70 @@
+{
+  "format": "memekb-pack",
+  "version": 1,
+  "id": "bundled",
+  "name": "Bundled templates",
+  "author": "Memetype",
+  "licence": "Placeholder images; replace with licensed templates",
+  "templates": [
+    {
+      "id": "drake",
+      "name": "Drake Hotline Bling",
+      "file": "templates/drake.png",
+      "keywords": ["reaction", "popular"]
+    },
+    {
+      "id": "distracted",
+      "name": "Distracted Boyfriend",
+      "file": "templates/distracted.png",
+      "keywords": ["reaction", "popular"]
+    },
+    {
+      "id": "two_buttons",
+      "name": "Two Buttons",
+      "file": "templates/two_buttons.png",
+      "keywords": ["reaction"]
+    },
+    {
+      "id": "change_my_mind",
+      "name": "Change My Mind",
+      "file": "templates/change_my_mind.png",
+      "keywords": ["popular"]
+    },
+    {
+      "id": "expanding_brain",
+      "name": "Expanding Brain",
+      "file": "templates/expanding_brain.png",
+      "keywords": ["popular"]
+    },
+    {
+      "id": "surprised_cat",
+      "name": "Surprised Cat",
+      "file": "templates/surprised_cat.png",
+      "keywords": ["animals", "reaction"]
+    },
+    {
+      "id": "doge",
+      "name": "Doge",
+      "file": "templates/doge.png",
+      "keywords": ["animals", "popular"]
+    },
+    {
+      "id": "grumpy_cat",
+      "name": "Grumpy Cat",
+      "file": "templates/grumpy_cat.png",
+      "keywords": ["animals", "reaction"]
+    },
+    {
+      "id": "this_is_fine",
+      "name": "This Is Fine",
+      "file": "templates/this_is_fine.png",
+      "keywords": ["reaction", "popular"]
+    },
+    {
+      "id": "success_kid",
+      "name": "Success Kid",
+      "file": "templates/success_kid.png",
+      "keywords": ["reaction"]
+    }
+  ]
+}
