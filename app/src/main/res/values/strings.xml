@@ -109,4 +109,26 @@
     <string name="donate_body">Memetype is free and open source. If it makes your chats better, a small donation keeps it going.</string>
     <string name="donate_open">Open donation page</string>
     <string name="close">Close</string>
+
+    <!-- Source sign-in -->
+    <string name="auth_sign_in">Sign in</string>
+    <string name="auth_sign_in_optional">Sign in (optional)</string>
+    <string name="auth_not_signed_in">Not signed in</string>
+    <string name="auth_signed_in_as">Signed in as %1$s</string>
+    <string name="auth_title">%1$s account</string>
+    <string name="auth_optional_hint">The source works without an account; signing in only adds the features above.</string>
+    <string name="auth_api_key_hint">Paste or type your %1$s. It is stored only on this device.</string>
+    <string name="auth_username">Username</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_save">Save</string>
+    <string name="auth_clear">Clear</string>
+    <string name="auth_test">Test</string>
+    <string name="auth_ok">Login works</string>
+    <string name="auth_saved">Saved</string>
+    <string name="auth_cleared">Credentials removed</string>
+    <string name="auth_help">How to get access</string>
+
+    <!-- IME plain-text mode (typing into Memetype's own screens) -->
+    <string name="text_mode_title">Memetype keyboard</string>
+    <string name="hide_keyboard">Hide keyboard</string>
 </resources>

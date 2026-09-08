@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Reserved for remote template sources (Imgflip / memegen.link); nothing uses the network yet. -->
+    <!-- Online template sources: Imgflip and memegen.link (index + images, https only). -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Android 9 only: saving into Pictures needs it there. Inert on 10+ (MediaStore / SAF). -->
     <uses-permission
@@ -52,6 +52,12 @@
             android:name=".ImportImageActivity"
             android:exported="false"
             android:label="@string/import_title" />
+
+        <!-- Credentials for a source that supports signing in (Imgflip). -->
+        <activity
+            android:name=".SourceLoginActivity"
+            android:exported="false"
+            android:label="@string/auth_sign_in" />
 
         <!-- The IME itself. -->
         <service

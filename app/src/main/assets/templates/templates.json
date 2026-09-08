@@ -1,70 +1,1962 @@
 {
-  "format": "memekb-pack",
-  "version": 1,
-  "id": "bundled",
-  "name": "Bundled templates",
-  "author": "Memetype",
-  "licence": "Placeholder images; replace with licensed templates",
-  "templates": [
-    {
-      "id": "drake",
-      "name": "Drake Hotline Bling",
-      "file": "templates/drake.png",
-      "keywords": ["reaction", "popular"]
-    },
-    {
-      "id": "distracted",
-      "name": "Distracted Boyfriend",
-      "file": "templates/distracted.png",
-      "keywords": ["reaction", "popular"]
-    },
-    {
-      "id": "two_buttons",
-      "name": "Two Buttons",
-      "file": "templates/two_buttons.png",
-      "keywords": ["reaction"]
-    },
-    {
-      "id": "change_my_mind",
-      "name": "Change My Mind",
-      "file": "templates/change_my_mind.png",
-      "keywords": ["popular"]
-    },
-    {
-      "id": "expanding_brain",
-      "name": "Expanding Brain",
-      "file": "templates/expanding_brain.png",
-      "keywords": ["popular"]
-    },
-    {
-      "id": "surprised_cat",
-      "name": "Surprised Cat",
-      "file": "templates/surprised_cat.png",
-      "keywords": ["animals", "reaction"]
-    },
-    {
-      "id": "doge",
-      "name": "Doge",
-      "file": "templates/doge.png",
-      "keywords": ["animals", "popular"]
-    },
-    {
-      "id": "grumpy_cat",
-      "name": "Grumpy Cat",
-      "file": "templates/grumpy_cat.png",
-      "keywords": ["animals", "reaction"]
-    },
-    {
-      "id": "this_is_fine",
-      "name": "This Is Fine",
-      "file": "templates/this_is_fine.png",
-      "keywords": ["reaction", "popular"]
-    },
-    {
-      "id": "success_kid",
-      "name": "Success Kid",
-      "file": "templates/success_kid.png",
-      "keywords": ["reaction"]
-    }
-  ]
+    "format":  "memekb-pack",
+    "version":  1,
+    "id":  "bundled",
+    "name":  "Classic memes",
+    "author":  "Memetype",
+    "licence":  "Images belong to their creators and are distributed as widely shared meme templates; text layouts from memegen.link (MIT). See each template\u0027s source link.",
+    "templates":  [
+                      {
+                          "id":  "drake",
+                          "name":  "Drake Hotline Bling",
+                          "file":  "templates/images/drake.jpg",
+                          "width":  446,
+                          "height":  698,
+                          "source":  "http://knowyourmeme.com/memes/drakeposting",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "left on unread",
+                                          "left on read"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "left on unread"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "left on read"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "two_buttons",
+                          "name":  "Two Buttons",
+                          "file":  "templates/images/two_buttons.jpg",
+                          "width":  458,
+                          "height":  684,
+                          "source":  "https://knowyourmeme.com/memes/daily-struggle",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "The dress is black and blue.",
+                                          "The dress is gold and white."
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.085,
+                                           "anchor_y":  0.085,
+                                           "scale_x":  0.32,
+                                           "scale_y":  0.095,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  12.5,
+                                           "hint":  "The dress is black and blue."
+                                       },
+                                       {
+                                           "anchor_x":  0.455,
+                                           "anchor_y":  0.055,
+                                           "scale_x":  0.23,
+                                           "scale_y":  0.09,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  10.5,
+                                           "hint":  "The dress is gold and white."
+                                       },
+                                       {
+                                           "anchor_x":  0.04,
+                                           "anchor_y":  0.82,
+                                           "scale_x":  0.92,
+                                           "scale_y":  0.15,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "distracted",
+                          "name":  "Distracted Boyfriend",
+                          "file":  "templates/images/distracted.jpg",
+                          "width":  800,
+                          "height":  533,
+                          "source":  "https://knowyourmeme.com/memes/distracted-boyfriend",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "Socialism",
+                                          "The Youth",
+                                          "Capitalism"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.12,
+                                           "anchor_y":  0.7,
+                                           "scale_x":  0.325,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Socialism"
+                                       },
+                                       {
+                                           "anchor_x":  0.55,
+                                           "anchor_y":  0.45,
+                                           "scale_x":  0.175,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "The Youth"
+                                       },
+                                       {
+                                           "anchor_x":  0.74,
+                                           "anchor_y":  0.66,
+                                           "scale_x":  0.2,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Capitalism"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "bernie",
+                          "name":  "Bernie Asking For Your Support",
+                          "file":  "templates/images/bernie.jpg",
+                          "width":  750,
+                          "height":  750,
+                          "source":  "https://imgflip.com/memegenerator/222403160",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "boxes":  2
+                      },
+                      {
+                          "id":  "uno_draw_25",
+                          "name":  "UNO Draw 25 Cards",
+                          "file":  "templates/images/uno_draw_25.jpg",
+                          "width":  500,
+                          "height":  494,
+                          "source":  "https://imgflip.com/memegenerator/217743513",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "boxes":  2
+                      },
+                      {
+                          "id":  "left_exit",
+                          "name":  "Left Exit 12 Off Ramp",
+                          "file":  "templates/images/left_exit.jpg",
+                          "width":  757,
+                          "height":  678,
+                          "source":  "https://knowyourmeme.com/memes/left-exit-12-off-ramp",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "The Pins",
+                                          "The Gutter",
+                                          "Bowling Ball"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.24,
+                                           "anchor_y":  0.15,
+                                           "scale_x":  0.15,
+                                           "scale_y":  0.22,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "#BBBBBB",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "The Pins"
+                                       },
+                                       {
+                                           "anchor_x":  0.53,
+                                           "anchor_y":  0.15,
+                                           "scale_x":  0.22,
+                                           "scale_y":  0.22,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "#BBBBBB",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "The Gutter"
+                                       },
+                                       {
+                                           "anchor_x":  0.46,
+                                           "anchor_y":  0.85,
+                                           "scale_x":  0.32,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  9,
+                                           "hint":  "Bowling Ball"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "always_has_been",
+                          "name":  "Always Has Been",
+                          "file":  "templates/images/always_has_been.jpg",
+                          "width":  800,
+                          "height":  450,
+                          "source":  "https://knowyourmeme.com/memes/wait-its-all-ohio-always-has-been",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "Wait, it\u0027s round?",
+                                          "Always has been",
+                                          "Flat Earther",
+                                          "Science"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.45,
+                                           "anchor_y":  0.35,
+                                           "scale_x":  0.25,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Wait, it\u0027s round?"
+                                       },
+                                       {
+                                           "anchor_x":  0.75,
+                                           "anchor_y":  0,
+                                           "scale_x":  0.25,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Always has been"
+                                       },
+                                       {
+                                           "anchor_x":  0.375,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  0.25,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Flat Earther"
+                                       },
+                                       {
+                                           "anchor_x":  0.75,
+                                           "anchor_y":  0.7,
+                                           "scale_x":  0.25,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Science"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "anakin_padme",
+                          "name":  "Anakin Padme 4 Panel",
+                          "file":  "templates/images/anakin_padme.jpg",
+                          "width":  768,
+                          "height":  768,
+                          "source":  "https://imgflip.com/memegenerator/322841258",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "boxes":  3
+                      },
+                      {
+                          "id":  "epic_handshake",
+                          "name":  "Epic Handshake",
+                          "file":  "templates/images/epic_handshake.jpg",
+                          "width":  800,
+                          "height":  573,
+                          "keywords":  [
+                                           "popular",
+                                           "object-labeled",
+                                           "object-labelling"
+                                       ],
+                          "example":  [
+                                          "left",
+                                          "right",
+                                          "center"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  -0.0275,
+                                           "anchor_y":  0.3,
+                                           "scale_x":  0.4,
+                                           "scale_y":  0.4,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  -45,
+                                           "hint":  "left"
+                                       },
+                                       {
+                                           "anchor_x":  0.4,
+                                           "anchor_y":  0.35,
+                                           "scale_x":  0.4,
+                                           "scale_y":  0.4,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  27.5,
+                                           "hint":  "right"
+                                       },
+                                       {
+                                           "anchor_x":  0.15,
+                                           "anchor_y":  0.1,
+                                           "scale_x":  0.5,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "center"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "grus_plan",
+                          "name":  "Gru\u0027s Plan",
+                          "file":  "templates/images/grus_plan.jpg",
+                          "width":  800,
+                          "height":  512,
+                          "source":  "https://knowyourmeme.com/memes/grus-plan",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "Learn how to make memes.",
+                                          "Make a meme.",
+                                          "No one likes it.",
+                                          "No one likes it."
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.275,
+                                           "anchor_y":  0.2,
+                                           "scale_x":  0.2075,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Learn how to make memes."
+                                       },
+                                       {
+                                           "anchor_x":  0.78,
+                                           "anchor_y":  0.2,
+                                           "scale_x":  0.205,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Make a meme."
+                                       },
+                                       {
+                                           "anchor_x":  0.28,
+                                           "anchor_y":  0.7,
+                                           "scale_x":  0.205,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "No one likes it."
+                                       },
+                                       {
+                                           "anchor_x":  0.78,
+                                           "anchor_y":  0.7,
+                                           "scale_x":  0.205,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "No one likes it."
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "running_balloon",
+                          "name":  "Running Away Balloon",
+                          "file":  "templates/images/running_balloon.jpg",
+                          "width":  680,
+                          "height":  913,
+                          "source":  "https://knowyourmeme.com/memes/running-away-balloon",
+                          "keywords":  [
+                                           "popular",
+                                           "Superlmer"
+                                       ],
+                          "example":  [
+                                          "Opportunities",
+                                          "Opportunities",
+                                          "Shyness"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.61,
+                                           "anchor_y":  0.1,
+                                           "scale_x":  0.39,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Opportunities"
+                                       },
+                                       {
+                                           "anchor_x":  0.8,
+                                           "anchor_y":  0.57,
+                                           "scale_x":  0.39,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Opportunities"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.7,
+                                           "scale_x":  0.27,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Shyness"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "waiting_skeleton",
+                          "name":  "Waiting Skeleton",
+                          "file":  "templates/images/waiting_skeleton.jpg",
+                          "width":  298,
+                          "height":  403,
+                          "source":  "https://imgflip.com/memegenerator/4087833",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "boxes":  2
+                      },
+                      {
+                          "id":  "sad_pablo",
+                          "name":  "Sad Pablo Escobar",
+                          "file":  "templates/images/sad_pablo.jpg",
+                          "width":  720,
+                          "height":  709,
+                          "source":  "https://imgflip.com/memegenerator/80707627",
+                          "keywords":  [
+                                           "reaction"
+                                       ],
+                          "boxes":  3
+                      },
+                      {
+                          "id":  "change_my_mind",
+                          "name":  "Change My Mind",
+                          "file":  "templates/images/change_my_mind.jpg",
+                          "width":  800,
+                          "height":  636,
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "pineapples don\u0027t belong on pizza"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.33,
+                                           "anchor_y":  0.33,
+                                           "scale_x":  0.46,
+                                           "scale_y":  0.25,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  23,
+                                           "hint":  "pineapples don\u0027t belong on pizza"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "disaster_girl",
+                          "name":  "Disaster Girl",
+                          "file":  "templates/images/disaster_girl.jpg",
+                          "width":  500,
+                          "height":  375,
+                          "source":  "http://knowyourmeme.com/memes/disaster-girl",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "",
+                                          "just as I planned..."
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "just as I planned..."
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "trade_offer",
+                          "name":  "Trade Offer",
+                          "file":  "templates/images/trade_offer.jpg",
+                          "width":  607,
+                          "height":  794,
+                          "source":  "https://imgflip.com/memegenerator/309868304",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "boxes":  3
+                      },
+                      {
+                          "id":  "batman_robin",
+                          "name":  "Batman Slapping Robin",
+                          "file":  "templates/images/batman_robin.jpg",
+                          "width":  400,
+                          "height":  387,
+                          "source":  "https://imgflip.com/memegenerator/438680",
+                          "keywords":  [
+                                           "reaction",
+                                           "classic"
+                                       ],
+                          "boxes":  2
+                      },
+                      {
+                          "id":  "ancient_aliens",
+                          "name":  "Ancient Aliens",
+                          "file":  "templates/images/ancient_aliens.jpg",
+                          "width":  550,
+                          "height":  461,
+                          "source":  "http://knowyourmeme.com/memes/ancient-aliens",
+                          "keywords":  [
+                                           "classic",
+                                           "History Channel"
+                                       ],
+                          "example":  [
+                                          "",
+                                          "aliens"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "aliens"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "x_everywhere",
+                          "name":  "X, X Everywhere",
+                          "file":  "templates/images/x_everywhere.jpg",
+                          "width":  500,
+                          "height":  380,
+                          "source":  "https://imgflip.com/memetemplate/X-Everywhere",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "memes",
+                                          "memes everywhere"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "memes"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "memes everywhere"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "mocking_spongebob",
+                          "name":  "Mocking Spongebob",
+                          "file":  "templates/images/mocking_spongebob.jpg",
+                          "width":  502,
+                          "height":  353,
+                          "source":  "http://knowyourmeme.com/memes/mocking-spongebob",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "BF: I don\u0027t even know her like that",
+                                          "Me: i DoN\u0027T eVeN KnOw HeR lIkE tHaT"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "BF: I don\u0027t even know her like that"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Me: i DoN\u0027T eVeN KnOw HeR lIkE tHaT"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "one_does_not",
+                          "name":  "One Does Not Simply",
+                          "file":  "templates/images/one_does_not.jpg",
+                          "width":  568,
+                          "height":  335,
+                          "source":  "http://knowyourmeme.com/memes/one-does-not-simply-walk-into-mordor",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "one does not simply",
+                                          "walk into mordor"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "one does not simply"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "walk into mordor"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "woman_yelling_cat",
+                          "name":  "Woman Yelling at a Cat",
+                          "file":  "templates/images/woman_yelling_cat.jpg",
+                          "width":  680,
+                          "height":  438,
+                          "source":  "https://knowyourmeme.com/memes/woman-yelling-at-a-cat",
+                          "keywords":  [
+                                           "reaction",
+                                           "animals",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "Mom telling me how useless I am",
+                                          "12 year old me playing Minecraft"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  0.5,
+                                           "scale_y":  0.22,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Mom telling me how useless I am"
+                                       },
+                                       {
+                                           "anchor_x":  0.5,
+                                           "anchor_y":  0,
+                                           "scale_x":  0.5,
+                                           "scale_y":  0.22,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "12 year old me playing Minecraft"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "is_this_a_pigeon",
+                          "name":  "Is This a Pigeon?",
+                          "file":  "templates/images/is_this_a_pigeon.jpg",
+                          "width":  800,
+                          "height":  480,
+                          "source":  "https://knowyourmeme.com/memes/is-this-a-pigeon",
+                          "keywords":  [
+                                           "reaction"
+                                       ],
+                          "example":  [
+                                          "Engineer",
+                                          "PowerPoint",
+                                          "Is this Photoshop?"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.15,
+                                           "anchor_y":  0,
+                                           "scale_x":  0.35,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Engineer"
+                                       },
+                                       {
+                                           "anchor_x":  0.71,
+                                           "anchor_y":  0.3,
+                                           "scale_x":  0.175,
+                                           "scale_y":  0.1,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "PowerPoint"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "#F0E68C",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Is this Photoshop?"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "same_picture",
+                          "name":  "They\u0027re the Same Picture",
+                          "file":  "templates/images/same_picture.jpg",
+                          "width":  800,
+                          "height":  896,
+                          "source":  "https://knowyourmeme.com/memes/theyre-the-same-picture",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "π",
+                                          "3",
+                                          "The Bible"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.06,
+                                           "anchor_y":  0.015,
+                                           "scale_x":  0.35,
+                                           "scale_y":  0.3,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  -12,
+                                           "hint":  "π"
+                                       },
+                                       {
+                                           "anchor_x":  0.525,
+                                           "anchor_y":  0.06,
+                                           "scale_x":  0.45,
+                                           "scale_y":  0.3,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  -12,
+                                           "hint":  "3"
+                                       },
+                                       {
+                                           "anchor_x":  0.45,
+                                           "anchor_y":  0.775,
+                                           "scale_x":  0.4,
+                                           "scale_y":  0.15,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "The Bible"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "expanding_brain",
+                          "name":  "Expanding Brain",
+                          "file":  "templates/images/expanding_brain.jpg",
+                          "width":  800,
+                          "height":  1122,
+                          "source":  "https://imgflip.com/memegenerator/93895088",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "boxes":  4
+                      },
+                      {
+                          "id":  "tuxedo_pooh",
+                          "name":  "Tuxedo Winnie the Pooh",
+                          "file":  "templates/images/tuxedo_pooh.jpg",
+                          "width":  800,
+                          "height":  480,
+                          "source":  "https://knowyourmeme.com/memes/tuxedo-winnie-the-pooh",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "Burger King",
+                                          "The Monarch of Hamburg"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.5,
+                                           "anchor_y":  0,
+                                           "scale_x":  0.5,
+                                           "scale_y":  0.5,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Burger King"
+                                       },
+                                       {
+                                           "anchor_x":  0.5,
+                                           "anchor_y":  0.5,
+                                           "scale_x":  0.5,
+                                           "scale_y":  0.5,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "The Monarch of Hamburg"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "buff_doge_cheems",
+                          "name":  "Buff Doge vs. Cheems",
+                          "file":  "templates/images/buff_doge_cheems.jpg",
+                          "width":  800,
+                          "height":  615,
+                          "source":  "https://imgflip.com/memegenerator/247375501",
+                          "keywords":  [
+                                           "animals",
+                                           "popular"
+                                       ],
+                          "boxes":  4
+                      },
+                      {
+                          "id":  "this_is_fine",
+                          "name":  "This Is Fine",
+                          "file":  "templates/images/this_is_fine.jpg",
+                          "width":  758,
+                          "height":  736,
+                          "source":  "http://gunshowcomic.com/648",
+                          "keywords":  [
+                                           "reaction",
+                                           "animals",
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "",
+                                          "this is fine"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "this is fine"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "oprah",
+                          "name":  "Oprah You Get a Car",
+                          "file":  "templates/images/oprah.jpg",
+                          "width":  800,
+                          "height":  600,
+                          "source":  "http://knowyourmeme.com/memes/oprah-you-get-a-car",
+                          "keywords":  [
+                                           "classic",
+                                           "everybody gets",
+                                           "you win"
+                                       ],
+                          "example":  [
+                                          "Top Line",
+                                          "Bottom Line"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Top Line"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "Bottom Line"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "monkey_puppet",
+                          "name":  "Monkey Puppet",
+                          "file":  "templates/images/monkey_puppet.jpg",
+                          "width":  800,
+                          "height":  666,
+                          "source":  "https://imgflip.com/memegenerator/148909805",
+                          "keywords":  [
+                                           "reaction",
+                                           "animals"
+                                       ],
+                          "boxes":  2
+                      },
+                      {
+                          "id":  "spiderman_pointing",
+                          "name":  "Spider-Man Pointing",
+                          "file":  "templates/images/spiderman_pointing.jpg",
+                          "width":  800,
+                          "height":  573,
+                          "source":  "https://knowyourmeme.com/memes/spider-man-pointing-at-spider-man",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "me pointing at you",
+                                          "you pointing at me"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.05,
+                                           "anchor_y":  0,
+                                           "scale_x":  0.45,
+                                           "scale_y":  0.15,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "me pointing at you"
+                                       },
+                                       {
+                                           "anchor_x":  0.5,
+                                           "anchor_y":  0.85,
+                                           "scale_x":  0.45,
+                                           "scale_y":  0.15,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "you pointing at me"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "roll_safe",
+                          "name":  "Roll Safe",
+                          "file":  "templates/images/roll_safe.jpg",
+                          "width":  554,
+                          "height":  310,
+                          "source":  "http://knowyourmeme.com/memes/roll-safe",
+                          "keywords":  [
+                                           "reaction",
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "can\u0027t get fired",
+                                          "if you don\u0027t have a job"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "can\u0027t get fired"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "if you don\u0027t have a job"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "boardroom",
+                          "name":  "Boardroom Meeting Suggestion",
+                          "file":  "templates/images/boardroom.jpg",
+                          "width":  500,
+                          "height":  649,
+                          "source":  "https://imgflip.com/memegenerator/1035805",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "boxes":  4
+                      },
+                      {
+                          "id":  "hide_the_pain",
+                          "name":  "Hide the Pain Harold",
+                          "file":  "templates/images/hide_the_pain.jpg",
+                          "width":  800,
+                          "height":  533,
+                          "source":  "https://knowyourmeme.com/memes/hide-the-pain-harold",
+                          "keywords":  [
+                                           "reaction",
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "when the boss sees",
+                                          "your meme tab"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "when the boss sees"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "your meme tab"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "evil_kermit",
+                          "name":  "Evil Kermit",
+                          "file":  "templates/images/evil_kermit.jpg",
+                          "width":  700,
+                          "height":  325,
+                          "source":  "https://imgflip.com/memegenerator/84341851",
+                          "keywords":  [
+                                           "reaction"
+                                       ],
+                          "boxes":  2
+                      },
+                      {
+                          "id":  "success_kid",
+                          "name":  "Success Kid",
+                          "file":  "templates/images/success_kid.jpg",
+                          "width":  550,
+                          "height":  530,
+                          "source":  "http://knowyourmeme.com/memes/success-kid-i-hate-sandcastles",
+                          "keywords":  [
+                                           "reaction",
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "don\u0027t know a question on the test",
+                                          "answer is in another question"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "don\u0027t know a question on the test"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "answer is in another question"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "grumpy_cat",
+                          "name":  "Grumpy Cat",
+                          "file":  "templates/images/grumpy_cat.jpg",
+                          "width":  500,
+                          "height":  617,
+                          "source":  "https://imgflip.com/memegenerator/Grumpy-Cat",
+                          "keywords":  [
+                                           "animals",
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "i hope that what does not kill you",
+                                          "tries again"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "i hope that what does not kill you"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "tries again"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "bad_luck_brian",
+                          "name":  "Bad Luck Brian",
+                          "file":  "templates/images/bad_luck_brian.jpg",
+                          "width":  400,
+                          "height":  400,
+                          "source":  "http://knowyourmeme.com/memes/bad-luck-brian",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "falls asleep in class",
+                                          "has a wet dream"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "falls asleep in class"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "has a wet dream"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "philosoraptor",
+                          "name":  "Philosoraptor",
+                          "file":  "templates/images/philosoraptor.jpg",
+                          "width":  432,
+                          "height":  432,
+                          "source":  "http://knowyourmeme.com/memes/philosoraptor",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "if the earth is the third planet from the sun",
+                                          "then isn\u0027t every country a third world country?"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "if the earth is the third planet from the sun"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "then isn\u0027t every country a third world country?"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "first_world",
+                          "name":  "First World Problems",
+                          "file":  "templates/images/first_world.jpg",
+                          "width":  422,
+                          "height":  298,
+                          "source":  "http://knowyourmeme.com/memes/first-world-problems",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "someone on the internet",
+                                          "disagrees with me"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "someone on the internet"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "disagrees with me"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "futurama_fry",
+                          "name":  "Futurama Fry",
+                          "file":  "templates/images/futurama_fry.jpg",
+                          "width":  603,
+                          "height":  452,
+                          "source":  "http://knowyourmeme.com/memes/futurama-fry-not-sure-if",
+                          "keywords":  [
+                                           "reaction",
+                                           "classic",
+                                           "Philip J. Fry"
+                                       ],
+                          "example":  [
+                                          "not sure if trolling",
+                                          "or just stupid"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "not sure if trolling"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "or just stupid"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "y_u_no",
+                          "name":  "Y U No",
+                          "file":  "templates/images/y_u_no.jpg",
+                          "width":  498,
+                          "height":  374,
+                          "source":  "http://knowyourmeme.com/memes/y-u-no-guy",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "y u no",
+                                          "use this meme!?"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "y u no"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "use this meme!?"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "doge",
+                          "name":  "Doge",
+                          "file":  "templates/images/doge.jpg",
+                          "width":  620,
+                          "height":  620,
+                          "source":  "http://knowyourmeme.com/memes/doge",
+                          "keywords":  [
+                                           "animals",
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "such meme",
+                                          "very skill"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "such meme"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "very skill"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "galaxy_brain",
+                          "name":  "Galaxy Brain",
+                          "file":  "templates/images/galaxy_brain.jpg",
+                          "width":  800,
+                          "height":  1131,
+                          "source":  "https://knowyourmeme.com/memes/galaxy-brain",
+                          "keywords":  [
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "Who",
+                                          "Whom",
+                                          "Whom\u0027st",
+                                          "Whomst\u0027d"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  0.49,
+                                           "scale_y":  0.245,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Who"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.255,
+                                           "scale_x":  0.49,
+                                           "scale_y":  0.246,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Whom"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.51,
+                                           "scale_x":  0.489,
+                                           "scale_y":  0.224,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Whom\u0027st"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.746,
+                                           "scale_x":  0.49,
+                                           "scale_y":  0.255,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "Whomst\u0027d"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "panik_kalm",
+                          "name":  "Panik Kalm Panik",
+                          "file":  "templates/images/panik_kalm.jpg",
+                          "width":  543,
+                          "height":  760,
+                          "source":  "https://knowyourmeme.com/memes/panik-kalm",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "You hear a sound downstairs",
+                                          "It\u0027s just a cat",
+                                          "You don\u0027t have a cat"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0.01,
+                                           "anchor_y":  0.01,
+                                           "scale_x":  0.45,
+                                           "scale_y":  0.32,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "You hear a sound downstairs"
+                                       },
+                                       {
+                                           "anchor_x":  0.01,
+                                           "anchor_y":  0.35,
+                                           "scale_x":  0.45,
+                                           "scale_y":  0.32,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "It\u0027s just a cat"
+                                       },
+                                       {
+                                           "anchor_x":  0.01,
+                                           "anchor_y":  0.69,
+                                           "scale_x":  0.45,
+                                           "scale_y":  0.305,
+                                           "align":  "center",
+                                           "style":  "none",
+                                           "color":  "black",
+                                           "outline":  "none",
+                                           "font":  "sans",
+                                           "angle":  0,
+                                           "hint":  "You don\u0027t have a cat"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "stonks",
+                          "name":  "Stonks",
+                          "file":  "templates/images/stonks.jpg",
+                          "width":  800,
+                          "height":  561,
+                          "source":  "https://knowyourmeme.com/memes/stonks",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "example":  [
+                                          "",
+                                          "stonks"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "stonks"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "surprised_pikachu",
+                          "name":  "Surprised Pikachu",
+                          "file":  "templates/images/surprised_pikachu.jpg",
+                          "width":  800,
+                          "height":  800,
+                          "source":  "https://imgflip.com/memegenerator/155067746",
+                          "keywords":  [
+                                           "reaction",
+                                           "popular"
+                                       ],
+                          "boxes":  3
+                      },
+                      {
+                          "id":  "wonka",
+                          "name":  "Condescending Wonka",
+                          "file":  "templates/images/wonka.jpg",
+                          "width":  480,
+                          "height":  345,
+                          "source":  "http://knowyourmeme.com/memes/condescending-wonka-creepy-wonka",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "oh, you just graduated?",
+                                          "you must know everything"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "oh, you just graduated?"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "you must know everything"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "kermit_tea",
+                          "name":  "But That\u0027s None of My Business",
+                          "file":  "templates/images/kermit_tea.jpg",
+                          "width":  480,
+                          "height":  337,
+                          "source":  "http://knowyourmeme.com/memes/but-thats-none-of-my-business",
+                          "keywords":  [
+                                           "reaction",
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "",
+                                          "but that\u0027s none of my business"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.8,
+                                           "scale_x":  1,
+                                           "scale_y":  0.2,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "but that\u0027s none of my business"
+                                       }
+                                   ]
+                      },
+                      {
+                          "id":  "patrick",
+                          "name":  "Push It Somewhere Else Patrick",
+                          "file":  "templates/images/patrick.jpg",
+                          "width":  343,
+                          "height":  604,
+                          "source":  "http://knowyourmeme.com/memes/push-it-somewhere-else-patrick",
+                          "keywords":  [
+                                           "classic"
+                                       ],
+                          "example":  [
+                                          "why don\u0027t we take all the memes",
+                                          "and put them on memegen"
+                                      ],
+                          "text":  [
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0,
+                                           "scale_x":  1,
+                                           "scale_y":  0.15,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "why don\u0027t we take all the memes"
+                                       },
+                                       {
+                                           "anchor_x":  0,
+                                           "anchor_y":  0.85,
+                                           "scale_x":  1,
+                                           "scale_y":  0.15,
+                                           "align":  "center",
+                                           "style":  "upper",
+                                           "color":  "white",
+                                           "outline":  "black",
+                                           "font":  "thick",
+                                           "angle":  0,
+                                           "hint":  "and put them on memegen"
+                                       }
+                                   ]
+                      }
+                  ]
 }

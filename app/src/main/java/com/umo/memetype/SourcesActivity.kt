@@ -9,6 +9,8 @@ import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import com.umo.memetype.meme.MemeTemplate
+import com.umo.memetype.source.AuthScheme
+import com.umo.memetype.source.AuthStatus
 import com.umo.memetype.source.LocalSource
 import com.umo.memetype.source.MemeSource
 import com.umo.memetype.source.PackInstaller
@@ -92,6 +94,18 @@ class SourcesActivity : Activity() {
             sourcesList.addView(Rows.switchRow(this, s.displayName, subtitle, row.enabled) { on ->
                 if (!io.isShutdown) io.execute { registry.setEnabled(s.id, on) }
             }.root)
+            val scheme = s.auth
+            if (scheme != AuthScheme.None) {
+                val optional = scheme is AuthScheme.UsernamePassword && scheme.optional
+                val title = getString(if (optional) R.string.auth_sign_in_optional else R.string.auth_sign_in)
+                val status = when (val st = registry.credentials.status(s)) {
+                    is AuthStatus.Ready -> getString(R.string.auth_signed_in_as, st.label)
+                    else -> getString(R.string.auth_not_signed_in)
+                }
+                sourcesList.addView(Rows.buttonRow(this, "    $title", status) {
+                    startActivity(SourceLoginActivity.intent(this, s.id))
+                }.root)
+            }
             if (s.removable) {
                 sourcesList.addView(Rows.buttonRow(this, getString(R.string.remove_source, s.displayName), null) {
                     if (!io.isShutdown) io.execute {

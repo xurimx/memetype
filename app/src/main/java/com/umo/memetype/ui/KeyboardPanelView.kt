@@ -14,13 +14,16 @@ import com.umo.memetype.meme.MemeTemplate
 import com.umo.memetype.meme.TemplateRepository
 import com.umo.memetype.meme.TextBox
 
-/** Which screen the panel shows; the host maps it to a height (grid 45%, editor 65% of the screen). */
-enum class PanelMode { GRID, EDITOR }
+/**
+ * Which screen the panel shows; the host maps it to a height (grid 45%, editor 65% of the screen,
+ * TEXT = a plain keyboard for Memetype's own text fields).
+ */
+enum class PanelMode { GRID, EDITOR, TEXT }
 
 /**
  * Root view returned from onCreateInputView. Fixed height (from [Host.panelHeightPx]);
- * a content area that swaps between the template grid and the editor. The global actions
- * (switch keyboard, settings, sources, GitHub, donate) sit in the grid's top row.
+ * a content area that swaps between the template grid, the editor and the plain-text keyboard.
+ * The global actions (switch keyboard, settings, sources, GitHub, donate) sit in the grid's top row.
  */
 class KeyboardPanelView(
     context: Context,
@@ -38,6 +41,11 @@ class KeyboardPanelView(
         fun openSources()
         fun openUrl(url: String)
         fun openDonate()
+        // Plain-text mode (the focused field belongs to Memetype itself).
+        fun typeText(text: String)
+        fun deleteBackward()
+        fun pressEnter()
+        fun hidePanel()
     }
 
     private val grid = TemplateGridView(context, repository, object : TemplateGridView.Callbacks {
@@ -53,6 +61,14 @@ class KeyboardPanelView(
         override fun onBack() = showGrid()
         override fun onSend(template: MemeTemplate, boxes: List<TextBox>) = host.sendMeme(template, boxes)
         override fun onSave(template: MemeTemplate, boxes: List<TextBox>) = host.saveMeme(template, boxes)
+    })
+
+    private val textMode = TextModeView(context, object : TextModeView.Callbacks {
+        override fun onText(text: String) = host.typeText(text)
+        override fun onBackspace() = host.deleteBackward()
+        override fun onEnter() = host.pressEnter()
+        override fun onSwitchKeyboard() = host.switchBackToPreviousKeyboard()
+        override fun onHide() = host.hidePanel()
     })
 
     private val content = FrameLayout(context)
@@ -74,7 +90,9 @@ class KeyboardPanelView(
         setBackgroundColor(ContextCompat.getColor(context, R.color.panel_bg))
         content.addView(grid, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT))
         content.addView(editor, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT))
+        content.addView(textMode, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
         editor.visibility = View.GONE
+        textMode.visibility = View.GONE
 
         addView(content, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT))
         // Last child so bringToFront() covers everything.
@@ -112,6 +130,7 @@ class KeyboardPanelView(
         setMode(PanelMode.GRID)
         editor.visibility = View.GONE
         editor.reset()
+        textMode.visibility = View.GONE
         grid.visibility = View.VISIBLE
         grid.closeSearch()
         grid.refresh()
@@ -120,8 +139,19 @@ class KeyboardPanelView(
     fun showEditor(template: MemeTemplate) {
         setMode(PanelMode.EDITOR)
         grid.visibility = View.GONE
+        textMode.visibility = View.GONE
         editor.visibility = View.VISIBLE
         editor.setTemplate(template)
+    }
+
+    /** Plain keyboard for Memetype's own text fields (Sources sign-in). */
+    fun showTextMode() {
+        setMode(PanelMode.TEXT)
+        grid.visibility = View.GONE
+        grid.closeSearch()
+        editor.visibility = View.GONE
+        editor.reset()
+        textMode.visibility = View.VISIBLE
     }
 
     private fun setMode(newMode: PanelMode) {

@@ -9,6 +9,7 @@ import com.umo.memetype.meme.Bitmaps
 import com.umo.memetype.meme.MemeTemplate
 import com.umo.memetype.meme.TextBoxSpec
 import com.umo.memetype.store.AppPrefs
+import com.umo.memetype.store.SourceCredentials
 import java.io.File
 
 /**
@@ -19,17 +20,20 @@ import java.io.File
 class SourceRegistry(private val context: Context, private val prefs: AppPrefs) {
 
     val local = LocalSource(context)
+    val credentials = SourceCredentials(context)
     private val bundled = PackSource.bundled(context)
+    private val imgflip = ImgflipSource(context)
+    private val memegen = MemegenSource(context)
     private val packsDir = File(context.filesDir, "packs")
 
-    /** Bundled, Mine, then installed packs in name order. */
+    /** Bundled, Mine, installed packs in name order, then the online sources. */
     fun discover(): List<MemeSource> {
         val packs = packsDir.listFiles()
             ?.filter { it.isDirectory && !it.name.startsWith(".") && File(it, PackSource.PACK_FILE).isFile }
             ?.sortedBy { it.name }
             ?.map { PackSource.installed(it) }
             ?: emptyList()
-        return listOf<MemeSource>(bundled, local) + packs
+        return listOf<MemeSource>(bundled, local) + packs + listOf(imgflip, memegen)
     }
 
     /** Enabled sources, in the user's order (unknown ids keep discovery order). */

@@ -84,6 +84,8 @@ class TemplateGridView(
             override fun onBackspace() { if (query.isNotEmpty()) setQuery(query.dropLast(1)) }
             override fun onEnter() = setSearchActive(false)
         }
+        // Remote sources report in later; show them as soon as they arrive.
+        repository.onChanged = { main.post { refresh() } }
 
         refresh()
     }
@@ -109,10 +111,14 @@ class TemplateGridView(
         if (searchKeyboard.visibility == View.VISIBLE) setSearchActive(false)
     }
 
+    private val debouncedRefresh = Runnable { refresh() }
+
     private fun setQuery(q: String) {
         query = q
         search.text = q
-        refresh()
+        // A non-blank query may hit provider-side search: wait for the typing to pause.
+        main.removeCallbacks(debouncedRefresh)
+        if (q.isBlank()) refresh() else main.postDelayed(debouncedRefresh, SEARCH_DEBOUNCE_MS)
     }
 
     private fun setSearchActive(active: Boolean) {
@@ -157,7 +163,11 @@ class TemplateGridView(
         grid.scrollToPosition(0)
     }
 
-    fun destroy() = io.shutdownNow()
+    fun destroy() {
+        main.removeCallbacks(debouncedRefresh)
+        repository.onChanged = null
+        io.shutdownNow()
+    }
 
     // ---- adapter ----------------------------------------------------------------
 
@@ -205,5 +215,6 @@ class TemplateGridView(
     private companion object {
         const val SPAN_COUNT = 4
         const val THUMB_FALLBACK_PX = 256
+        const val SEARCH_DEBOUNCE_MS = 400L
     }
 }

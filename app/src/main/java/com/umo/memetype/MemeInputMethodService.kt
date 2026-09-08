@@ -21,6 +21,8 @@ import com.umo.memetype.store.AppPrefs
 import com.umo.memetype.store.HistoryStore
 import com.umo.memetype.ui.KeyboardPanelView
 import com.umo.memetype.ui.PanelMode
+import com.umo.memetype.ui.TextModeView
+import android.view.KeyEvent
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -56,8 +58,11 @@ class MemeInputMethodService : InputMethodService(), KeyboardPanelView.Host {
 
     override fun onStartInputView(info: EditorInfo?, restarting: Boolean) {
         super.onStartInputView(info, restarting)
-        // Fresh field (or re-shown): always land on the template grid.
-        if (!restarting) panel?.showGrid()
+        // Fresh field (or re-shown): the template grid — unless the field is one of Memetype's own
+        // (Sources sign-in), where the panel becomes a plain keyboard instead.
+        if (!restarting) {
+            if (info?.packageName == packageName) panel?.showTextMode() else panel?.showGrid()
+        }
         panel?.onTargetChanged(info)
     }
 
@@ -90,6 +95,7 @@ class MemeInputMethodService : InputMethodService(), KeyboardPanelView.Host {
 
     override fun panelHeightPx(mode: PanelMode): Int {
         val dm = resources.displayMetrics
+        if (mode == PanelMode.TEXT) return (TextModeView.HEIGHT_DP * dm.density).toInt()
         val isLandscape = dm.widthPixels > dm.heightPixels
         // Portrait: a fraction of the screen height (the editor needs room for the canvas).
         // Landscape: the same share of the (short) height for both modes. Growing the panel
@@ -98,6 +104,7 @@ class MemeInputMethodService : InputMethodService(), KeyboardPanelView.Host {
         val fraction = when (mode) {
             PanelMode.GRID -> if (isLandscape) LANDSCAPE_FRACTION_GRID else PANEL_FRACTION_GRID
             PanelMode.EDITOR -> if (isLandscape) LANDSCAPE_FRACTION_EDITOR else PANEL_FRACTION_EDITOR
+            PanelMode.TEXT -> 0f // handled above
         }
         val basis = if (isLandscape) dm.heightPixels else maxOf(dm.heightPixels, dm.widthPixels)
         return (basis * fraction).toInt()
@@ -214,6 +221,31 @@ class MemeInputMethodService : InputMethodService(), KeyboardPanelView.Host {
     }
 
     override fun openDonate() = launch(Intent(this, DonateActivity::class.java))
+
+    // ---- plain-text mode --------------------------------------------------------
+
+    override fun typeText(text: String) {
+        currentInputConnection?.commitText(text, 1)
+    }
+
+    override fun deleteBackward() {
+        val ic = currentInputConnection ?: return
+        val selected = ic.getSelectedText(0)
+        if (!selected.isNullOrEmpty()) ic.commitText("", 1) else ic.deleteSurroundingText(1, 0)
+    }
+
+    override fun pressEnter() {
+        val info = currentInputEditorInfo
+        val action = info?.imeOptions?.and(EditorInfo.IME_MASK_ACTION) ?: EditorInfo.IME_ACTION_NONE
+        val noEnterAction = info?.imeOptions?.and(EditorInfo.IME_FLAG_NO_ENTER_ACTION) != 0
+        if (action != EditorInfo.IME_ACTION_NONE && action != EditorInfo.IME_ACTION_UNSPECIFIED && !noEnterAction) {
+            currentInputConnection?.performEditorAction(action)
+        } else {
+            sendDownUpKeyEvents(KeyEvent.KEYCODE_ENTER)
+        }
+    }
+
+    override fun hidePanel() = requestHideSelf(0)
 
     /** Activities started from a service need their own task. */
     private fun launch(intent: Intent) {
