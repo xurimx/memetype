@@ -18,19 +18,28 @@ jobs:
 
       # Runs the Gradle wrapper client only; the build daemon downloads its own JDK 25
       # through gradle/gradle-daemon-jvm.properties (Foojay URLs).
-      - uses: actions/setup-java@v6.0.0
+      - id: java
+        uses: actions/setup-java@v5.7.0
         with:
           distribution: temurin
           java-version: '21'
 
+      # JAVA_HOME made explicit so sdkmanager/Gradle find the JDK on runners (and in act) where the
+      # PATH change from setup-java is not visible to later steps.
       - uses: android-actions/setup-android@v4.0.1
+        env:
+          JAVA_HOME: ${{ steps.java.outputs.path }}
 
       - name: Install SDK packages
-        run: sdkmanager --install "platforms;android-37" "build-tools;36.0.0"
+        env:
+          JAVA_HOME: ${{ steps.java.outputs.path }}
+        run: sdkmanager --install "platforms;android-37.0" "build-tools;36.0.0"
 
       - uses: gradle/actions/setup-gradle@v6.3.0
 
       - name: Build debug flavours and lint release variants
+        env:
+          JAVA_HOME: ${{ steps.java.outputs.path }}
         run: |
           chmod +x gradlew
           ./gradlew --no-daemon :app:assembleFossDebug :app:assemblePlayDebug :app:lintFossRelease :app:lintPlayRelease
