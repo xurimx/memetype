@@ -1,0 +1,50 @@
+# CI build: both flavours (debug) + release lint. Manual trigger for now; add
+#   pull_request: / push: { branches: [main] }
+# under `on:` when automatic runs are wanted.
+name: build
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      # Runs the Gradle wrapper client only; the build daemon downloads its own JDK 25
+      # through gradle/gradle-daemon-jvm.properties (Foojay URLs).
+      - uses: actions/setup-java@v6.0.0
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - uses: android-actions/setup-android@v4.0.1
+
+      - name: Install SDK packages
+        run: sdkmanager --install "platforms;android-37" "build-tools;36.0.0"
+
+      - uses: gradle/actions/setup-gradle@v6.3.0
+
+      - name: Build debug flavours and lint release variants
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon :app:assembleFossDebug :app:assemblePlayDebug :app:lintFossRelease :app:lintPlayRelease
+
+      - name: Upload lint reports
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: lint-reports
+          path: app/build/reports/lint-results-*.html
+          if-no-files-found: ignore
+
+      - name: Upload debug APKs
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: debug-apks
+          path: app/build/outputs/apk/*/debug/*.apk

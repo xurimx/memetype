@@ -1,5 +1,8 @@
 # Memetype
 
+[![build](https://github.com/xurimx/memetype/actions/workflows/build.yml/badge.svg)](https://github.com/xurimx/memetype/actions/workflows/build.yml)
+[![release](https://github.com/xurimx/memetype/actions/workflows/release.yml/badge.svg)](https://github.com/xurimx/memetype/releases)
+
 An Android keyboard that makes memes. Switch to it in any chat, pick a template, type the captions on its built-in keyboard, drag the text where you want it and tap **Send**: the finished picture lands in the conversation and your usual keyboard comes back.
 
 ## Features
@@ -48,6 +51,15 @@ Two product flavours of the same app (dimension `distribution`):
 ### Signing
 
 Release builds are minified (R8) and signed with the upload key described in `keystore.properties.example`: copy it to `keystore.properties` (git-ignored) and fill in the paths and passwords. Without that file, release builds are unsigned and debug builds are unaffected. Google Play re-signs the `.aab` with its own key (Play App Signing), so a sideloaded `foss` APK and the Play install conflict on one device; that is normal for open-source apps.
+
+### Releases and CI
+
+Two GitHub Actions workflows live in `.github/workflows/`, both started by hand from the Actions tab for now:
+
+- **build** — compiles both debug flavours, lints both release variants, keeps the debug APKs as run artifacts.
+- **release** — builds the `foss` release APK and the `play` bundle, publishes them as run artifacts (`memetype-<version>-foss.apk`, `memetype-<version>-play.aab`, `SHA256SUMS.txt`) and, when given a tag such as `v0.4`, creates the GitHub Release with the APK attached. Bump `versionCode` / `versionName` in `app/build.gradle.kts` first. Signing uses the repository secrets `UPLOAD_KEYSTORE_B64` (base64 of the upload keystore), `UPLOAD_STORE_PASSWORD`, `UPLOAD_KEY_ALIAS` and `UPLOAD_KEY_PASSWORD`; without them the APK is built unsigned and the release says so.
+
+Downloads: https://github.com/xurimx/memetype/releases
 
 ### Regenerating the bundled pack
 
