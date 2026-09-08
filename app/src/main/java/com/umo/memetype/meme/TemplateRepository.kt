@@ -74,6 +74,9 @@ class TemplateRepository(
         return result
     }
 
+    /** True while at least one remote source is being fetched (the grid shows "Loading…" instead of "No templates"). */
+    fun isLoadingRemote(): Boolean = synchronized(lock) { remoteLoading.isNotEmpty() }
+
     private fun startRemoteLoad(source: MemeSource) {
         if (remoteExecutor.isShutdown) return
         remoteExecutor.execute {

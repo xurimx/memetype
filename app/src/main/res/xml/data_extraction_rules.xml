@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+ (dataExtractionRules): cloud backup and device-to-device transfer both skip the
+     Imgflip credentials. Layouts, history, imported images and settings are transferred. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="source_auth.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="source_auth.xml" />
+    </device-transfer>
+</data-extraction-rules>

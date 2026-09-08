@@ -31,6 +31,29 @@ From PowerShell, with `JAVA_HOME` pointing at Studio's `jbr` folder and `ANDROID
 
 `local.properties` (git-ignored) needs `sdk.dir=C\:/path/to/Android/Sdk`; escape the drive colon or lint fails with `PropertyEscape`.
 
+### Flavours and release builds
+
+Two product flavours of the same app (dimension `distribution`):
+
+| Flavour | Bundled "Classic memes" pack | Donate link | For |
+|---|---|---|---|
+| `foss` (default) | yes (`app/src/foss/assets/templates`) | yes | GitHub releases, F-Droid |
+| `play` | no — templates come from the online sources | no | Google Play (IP and Payments policies) |
+
+Release builds are minified (R8) and signed with the upload key described in `keystore.properties.example`
+(copy it to `keystore.properties`, git-ignored). Without that file, release builds are unsigned and debug
+builds are unaffected.
+
+```
+.\gradlew.bat :app:installFossDebug        # day-to-day
+.\gradlew.bat :app:assembleFossRelease     # signed APK for GitHub
+.\gradlew.bat :app:bundlePlayRelease       # .aab for Play Console
+```
+
+`targetSdk` is 36 (Google Play requires API 36 for new apps and updates from 31 Aug 2026). Backups exclude the
+`source_auth` credentials file (`res/xml/backup_rules.xml`, `data_extraction_rules.xml`). Store-listing text,
+Data-safety answers and the privacy policy draft live in `docs/PLAY_LISTING.md` and `docs/privacy.md`.
+
 ## Try it
 
 1. Launch **Memetype** (the `SettingsActivity`) → *Enable keyboard* → toggle it on in system settings. *Select keyboard* opens the system picker.

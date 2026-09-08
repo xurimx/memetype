@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.umo.memetype.BuildConfig
 import com.umo.memetype.R
 import com.umo.memetype.meme.MemeTemplate
 import com.umo.memetype.meme.TemplateRepository
@@ -78,7 +79,11 @@ class TemplateGridView(
         findViewById<View>(R.id.btn_settings).setOnClickListener { callbacks.onOpenSettings() }
         findViewById<View>(R.id.btn_sources).setOnClickListener { callbacks.onOpenSources() }
         findViewById<View>(R.id.btn_github).setOnClickListener { callbacks.onOpenGithub() }
-        findViewById<View>(R.id.btn_donate).setOnClickListener { callbacks.onOpenDonate() }
+        findViewById<View>(R.id.btn_donate).apply {
+            // The Play flavour has no donation link (Google Play Payments policy).
+            visibility = if (BuildConfig.DONATE_ENABLED) View.VISIBLE else View.GONE
+            setOnClickListener { callbacks.onOpenDonate() }
+        }
         searchKeyboard.listener = object : MiniKeyboardView.Listener {
             override fun onText(text: String) = setQuery(query + text)
             override fun onBackspace() { if (query.isNotEmpty()) setQuery(query.dropLast(1)) }
@@ -98,9 +103,12 @@ class TemplateGridView(
         if (io.isShutdown) return
         io.execute {
             val items = try { repository.search(q, cat) } catch (e: Exception) { emptyList() }
+            val loading = items.isEmpty() && repository.isLoadingRemote()
             main.post {
                 if (serial != refreshSerial) return@post
                 adapter.submit(items)
+                // With no bundled pack (Play flavour) the first open waits for the online indexes.
+                empty.setText(if (loading) R.string.source_loading else R.string.no_templates)
                 empty.visibility = if (items.isEmpty()) View.VISIBLE else View.GONE
             }
         }

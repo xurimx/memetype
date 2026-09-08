@@ -78,6 +78,7 @@
     <string name="chip_animals">Animals</string>
     <string name="send_hint_clipboard">This app doesn’t accept images — will copy to clipboard</string>
     <string name="no_templates">No templates</string>
+    <string name="source_loading">Loading online templates…</string>
     <string name="toast_copied">Copied — long-press the text field and paste</string>
     <string name="toast_render_failed">Couldn’t build the meme</string>
     <string name="toast_saved">Saved to %1$s</string>
@@ -103,6 +104,8 @@
     <!-- TODO: fill in once the repository and the donation page exist. Blank = the buttons report "Link not set yet". -->
     <string name="github_url"></string>
     <string name="donate_url"></string>
+    <string name="privacy_url"></string>
+    <string name="privacy_policy">Privacy policy</string>
     <string name="link_not_set">Link not set yet</string>
     <string name="toast_no_browser">No browser found to open the link</string>
     <string name="donate_title">Support Memetype</string>

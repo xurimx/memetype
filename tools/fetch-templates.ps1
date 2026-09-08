@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Rebuilds the bundled template pack (app/src/main/assets/templates) and the memegen layout
+  Rebuilds the bundled template pack (app/src/foss/assets/templates, the foss flavour only) and the memegen layout
   table (app/src/main/assets/memegen_layouts.json) from the network.
 
 .DESCRIPTION
@@ -20,7 +20,8 @@
 #>
 param(
     [string]$Work = (Join-Path $env:TEMP 'memetype-fetch'),
-    [string]$Assets = (Join-Path $PSScriptRoot '..\app\src\main\assets'),
+    [string]$Assets = (Join-Path $PSScriptRoot "../app/src/foss/assets"),
+    [string]$MainAssets = (Join-Path $PSScriptRoot "../app/src/main/assets"),
     [int]$MaxWidth = 800,
     [int]$JpegQuality = 85
 )
@@ -257,5 +258,5 @@ foreach ($dir in Get-ChildItem -LiteralPath $templatesDir -Directory | Where-Obj
     $layouts[$dir.Name] = [ordered]@{ text = $boxes; example = @($cfg.example) }
 }
 $layoutJson = $layouts | ConvertTo-Json -Depth 6 -Compress
-[IO.File]::WriteAllText((Join-Path $Assets 'memegen_layouts.json'), $layoutJson, (New-Object System.Text.UTF8Encoding $false))
+[IO.File]::WriteAllText((Join-Path $MainAssets 'memegen_layouts.json'), $layoutJson, (New-Object System.Text.UTF8Encoding $false))
 Write-Host "Wrote memegen_layouts.json with $($layouts.Count) layouts"

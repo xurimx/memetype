@@ -105,9 +105,13 @@ class SettingsActivity : Activity() {
         list.addView(Rows.header(this, getString(R.string.settings_section_about)))
         list.addView(Rows.textRow(this, getString(R.string.app_name), getString(R.string.about_version, versionName())).root)
         list.addView(Rows.buttonRow(this, getString(R.string.sidebar_github)) { openUrl(getString(R.string.github_url)) }.root)
-        list.addView(Rows.buttonRow(this, getString(R.string.sidebar_donate)) {
-            startActivity(Intent(this, DonateActivity::class.java))
-        }.root)
+        list.addView(Rows.buttonRow(this, getString(R.string.privacy_policy)) { openUrl(getString(R.string.privacy_url)) }.root)
+        // The Play flavour has no donation link (Google Play Payments policy).
+        if (BuildConfig.DONATE_ENABLED) {
+            list.addView(Rows.buttonRow(this, getString(R.string.sidebar_donate)) {
+                startActivity(Intent(this, DonateActivity::class.java))
+            }.root)
+        }
 
         // Edge-to-edge on targetSdk 35: keep the content out of the status and navigation bars.
         setContentView(ScrollView(this).apply {
